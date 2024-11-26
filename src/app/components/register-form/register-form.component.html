@@ -1,0 +1,169 @@
+
+<div class="register-container"> 
+  
+
+  <div class="basic-info"> 
+
+    <div> 
+      Thông Tin Liên Lạc
+    </div>
+  <mat-stepper linear #stepper>
+
+    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <div>
+      
+    </div>
+
+    <mat-step [stepControl]="ThirdFormGroup" [editable]="isEditable">
+      <form [formGroup]="ThirdFormGroup">
+        <ng-template matStepLabel>Fill out your phone number</ng-template>
+        <mat-form-field>
+          <mat-label>phone number</mat-label>
+          <input matInput type="tel" formControlName="thirdCtrl" placeholder="your phone"
+          pattern="[0-9]*" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="FourthFormGroup" [editable]="isEditable">
+      <form [formGroup]="FourthFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="fourthCtrl" placeholder="email"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>
+
+<app-chip-pattern></app-chip-pattern>
+
+<div class="detail-info">
+
+<div>Thông tin chung</div>
+
+
+<mat-stepper orientation="vertical" linear #stepper>
+  <mat-step >
+      <ng-template matStepLabel>Tại sao bạn muốn nhận nuôi thú cưng</ng-template>
+  <div class="grid-checkbox"> 
+  <p-checkbox 
+  label="Tôi yêu chúng" 
+ 
+ />
+ <p-checkbox 
+ label="làm bạn đồng hành với trẻ con" 
+ 
+/>
+
+<p-checkbox 
+label="Canh nhà" />
+<p-checkbox 
+label="lý do khác" 
+
+/>
+
+</div>
+      <div>
+        <button mat-button matStepperNext >Next</button>
+      </div>
+   
+  </mat-step>
+  <mat-step  >
+    <ng-template matStepLabel>Bạn sống ở</ng-template>
+    <mat-radio-group [(ngModel)]="selectedOption" aria-label="Select an option">
+      <mat-radio-button value="1">căn hộ</mat-radio-button>
+      <mat-radio-button value="2">nhà riêng</mat-radio-button>
+      <mat-radio-button value="2">khác</mat-radio-button>
+    </mat-radio-group>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext  [disabled]="!selectedOption">Next</button>
+      </div>
+    
+  </mat-step>
+
+  <mat-step >
+    <ng-template matStepLabel>nơi bạn sống thuộc quyền sở hữu của bạn ?</ng-template>
+    <mat-radio-group [(ngModel)]="homeOwnership" aria-label="Select an option">
+      <mat-radio-button value="1">đúng</mat-radio-button>
+      <mat-radio-button value="2">không</mat-radio-button>
+    </mat-radio-group>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext [disabled]="!homeOwnership">Next</button>
+    </div>
+  </mat-step>
+
+  <mat-step >
+    <ng-template matStepLabel>Done</ng-template>
+    <p>hoàn tất.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>
+
+
+
+
+
+</div>
+
+<button class="button-submit" mat-fab extended [disabled]="false">
+  Xác nhận
+  <mat-icon svgIcon="thumbs-up" >✅️</mat-icon>
+</button>
+ </div>
+
+ 
+ 
+ 
+ 

@@ -1,0 +1,154 @@
+
+<div class="container-card"> 
+
+<div class="personal-board">
+
+  <div class="header-personal-board"> 
+    <img class="personal-image" src="https://www.rspca.org.uk/documents/d/rspca/findapetheroocto?imagePreview=1">
+    <div>Profile</div>
+    <div> </div>
+  </div>
+
+  <div class="main-personal-board">
+    <mat-tab-group>
+      <mat-tab label="Danh sach thu cung">
+        <div *ngFor="let petIdx of messageList">
+          <div class="petBar">
+            <img class="imgAvt" [src]="list[petIdx].imageUrl[0]"/>
+            <div class="namePet">{{list[petIdx].description.name}}</div>
+            <div class="icons-wrap-pet-bar">
+              <img class="specific-icon-pet-bar" (click)="backPet()" src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fchat.png?alt=media&token=155231f8-54b0-44c4-8d95-154a182b464d"/>
+              <img class="specific-icon-pet-bar" (click)="removePetInQueue(petIdx)" src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fclose.png?alt=media&token=f385338e-0c74-413e-8231-06f6ac331be9"/>
+              <img class="specific-icon-pet-bar" (click)="sendRequest(petIdx)"  src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fpawprint.png?alt=media&token=00105506-37ba-43fa-9337-79527622e695"/> 
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Đã gửi yêu cầu">
+        <div *ngFor="let pet of RequestedPetList">
+          <mat-expansion-panel hideToggle>
+
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+          <div class="petBar">
+            <img class="imgAvt" [src]="list[pet.idx].imageUrl[0]"/>
+            <div class="namePet">{{list[pet.idx].description.name}}</div>
+          </div>
+        </mat-panel-title>
+          <mat-panel-description>
+            <div class="icons-wrap-pet-bar">
+              <img *ngIf="pet.status == 0" class="specific-icon-pet-bar"  src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fexpired_6520475.png?alt=media&token=d69c26db-eeb0-4512-8802-9da161375291"/>
+              <img *ngIf="pet.status == 1" class="specific-icon-pet-bar" src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fhealthy.png?alt=media&token=1f1758ae-c55d-406c-b711-96a9a9c3e21f"/>
+              <img *ngIf="pet.status == 2" class="specific-icon-pet-bar"  src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fx-button.png?alt=media&token=55f2a174-10f5-405e-8963-879785e668ee"/> 
+            </div>
+          </mat-panel-description>
+       
+        </mat-expansion-panel-header>
+        <p *ngIf="pet.status == 0">Chúng tôi sẽ kiểm tra thông tin cá nhân của bạn,
+          yêu cầu của bạn sẽ được xem xét trong thời gian sớm nhất
+        </p>
+        <p *ngIf="pet.status == 2">xin lỗi đã từ chối yêu cầu này,
+          vì lý do : môi trường sống của thú cưng này không phù hợp trong môi trường sống của bạn.
+        </p>
+        <p *ngIf="pet.status == 1">yêu cầu của bạn đã được phê duyệt, vui lòng giữ máy để chúng tôi có thể liên hệ trong thời gian sớm nhất</p>
+        </mat-expansion-panel>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  
+
+</div>
+
+
+
+
+
+<div class="card-container" [ngStyle]="{ 'overflow-y': shouldScroll ? 'scroll' : 'visible' }"> 
+  <mat-tab-group class="mat-tab-gr" [selectedIndex]="indexTab">
+    <mat-tab *ngFor="let tab of list[currentPetidx].imageUrl">
+      <img  [src]="tab"/>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="arrow">
+
+    <img (click)="back()" src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fleft-arrow.png?alt=media&token=d7761f10-9bf2-44fa-b1e3-0b27a15a8e0f"  />
+    <img (click)="next()"  src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fright.png?alt=media&token=2902c1ac-6439-458e-bacc-935edc1ef059"/>
+
+  </div>
+
+  
+
+  <div class="info-container-wrap">
+
+    <div class="info-container"> 
+      <p class="namePet">{{list[currentPetidx].description.name}}</p>
+      <div class="grid-chip"> 
+      <mat-chip >{{list[currentPetidx].description.age}}</mat-chip>
+      <mat-chip >{{list[currentPetidx].description.vaccin}}</mat-chip>
+      <mat-chip >{{list[currentPetidx].description.sex}}</mat-chip>
+      <mat-chip >{{list[currentPetidx].description.color}}</mat-chip>
+      <mat-chip >{{currentPetidx}}</mat-chip>
+      </div>
+    
+
+      <div class="icons-wrap">
+        <img class="specific-icon" (click)="backPet()" src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fundo.png?alt=media&token=2280de59-4fba-4a3f-b656-4a41cf623b74"/>
+        <img class="specific-icon" (click)="nextPet()" src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fclose.png?alt=media&token=f385338e-0c74-413e-8231-06f6ac331be9"/>
+        <img class="specific-icon" (click)="chooseThisPet()"  src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fpaw_5065171.png?alt=media&token=bdaacff2-e29e-4b92-bd89-4e82b8c8e4e5"/> 
+        <img class="specific-icon" (click)="moreDetail()" src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fmenu.png?alt=media&token=c5ec0bdf-2f87-4466-8de9-8233a30c6deb"  />
+      </div>
+      
+    </div>
+
+    
+     
+  </div>
+
+
+
+
+  <div *ngIf="detail" class="detail-container"> 
+
+    <h2>Thông tin thú cưng</h2>
+  <div class="pet-info-item">
+    <label>ID:</label>
+    <span>{{list[currentPetidx].description.id}}</span>
+  </div>
+  <div class="pet-info-item">
+    <label>Tên:</label>
+    <span>{{list[currentPetidx].description.name}}</span>
+  </div>
+  <div class="pet-info-item">
+    <label>Giới tính:</label>
+    <span>{{list[currentPetidx].description.sex}}</span>
+  </div>
+  <div class="pet-info-item">
+    <label>Cân nặng:</label>
+    <span>{{list[currentPetidx].description.weight}}</span>
+  </div>
+  <div class="pet-info-item">
+    <label>Màu sắc:</label>
+    <span>{{list[currentPetidx].description.color}}</span>
+  </div>
+  <div class="pet-info-item">
+    <label>Vắc xin:</label>
+    <span>{{list[currentPetidx].description.vaccin}}</span>
+  </div>
+  <div class="pet-info-item">
+    <label>Tuổi:</label>
+    <span>{{list[currentPetidx].description.age}}</span>
+  </div>
+  <div class="pet-info-item">
+    <label>Ghi chú:</label>
+    <span>{{list[currentPetidx].description.comment}}</span>
+  </div>
+
+  </div>
+
+  
+</div>
+
+</div>
+  

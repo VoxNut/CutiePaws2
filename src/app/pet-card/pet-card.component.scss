@@ -1,0 +1,382 @@
+
+.container-card {
+
+display: flex;
+flex-direction: row;
+
+
+.personal-board {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  width: 600px;
+  height: 947px;
+
+
+  .header-personal-board {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    border: 1px solid red;
+    background-color: rgba(252, 255, 92, 0.882);
+    width: 600px;
+    height: 100px;
+
+    .personal-image {
+      border-radius: 30px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .main-personal-board {
+    position: relative;
+    background-color: #f8f9fa; // Light background color for the tab content
+  padding: 16px;
+
+    .petBar {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border-bottom: 1px solid #e0e0e0;
+      background-color: #ffffff;
+    }
+  
+    // Styling for the avatar image of the pet
+    .imgAvt {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+  
+    // Name of the pet
+    .namePet {
+      flex-grow: 1;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+  
+    // Container for the icons in the pet bar
+    .icons-wrap-pet-bar {
+      display: flex;
+      align-items: center;
+  
+      .specific-icon-pet-bar {
+        width: 24px;
+        height: 24px;
+        margin-left: 8px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+  
+        &:hover {
+          transform: scale(1.1); // Slightly enlarge on hover
+        }
+      }
+    }
+  
+    // Expansion panel customization
+    mat-expansion-panel {
+      margin-top: 8px;
+  
+      
+  
+      &.mat-expanded {
+        background-color: #f1f1f1; // Change background when expanded
+      }
+  
+      mat-expansion-panel-header {
+        background-color: #ffffff; // Background for the header
+        border-radius: 4px;
+        padding: 0;
+  
+        .mat-content {
+          width: 100%;
+        }
+  
+        // Styling for the title in the panel header
+        .mat-expansion-panel-header-title {
+          font-size: 16px;
+          font-weight: 500;
+          color: #333;
+        }
+  
+        // Styling for the description in the panel header (if used)
+        .mat-expansion-panel-header-description {
+          margin-left: 330px;
+          font-size: 14px;
+          color: #666;
+        }
+      }
+  
+      p {
+        padding: 8px;
+        font-size: 14px;
+        color: #555;
+      }
+    }
+
+   
+
+  }
+}
+
+
+.card-container {
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 300px;
+  width: 650px;
+  height: 947px;
+
+  .arrow {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
+    top: -400px;
+    width: 90%;
+   
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    img:hover {
+      scale: 1.1;
+    }
+  }
+ 
+
+  .mat-tab-gr {
+    position: relative;
+    max-width: 700px;
+    max-height: 80%;
+    width: 100%;
+    height: 80%;
+
+    
+
+   
+
+    ::ng-deep mat-tab {
+
+      mat-tab {
+
+      
+      .tab-content {
+        position: relative;
+        display: flex;
+        overflow: visible;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 50%;
+        width: 700px;
+
+        .imgPet {
+          max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+        }
+
+        .imgF {
+          position: relative;
+          border-radius: 60px;
+          width: 690px;
+          height: 900px;
+          object-fit: cover;
+        }
+      }
+    }
+    }
+  }
+
+  
+
+  .info-container-wrap {
+
+    z-index: 5;
+    position: relative;
+    top: -400px;
+    width: 100%;
+    height: 350px;
+    
+    box-shadow: 0px 00px 60px rgba(224, 13, 13, 0.061);
+  
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.05), 
+      rgba(0, 0, 0, 0.1), 
+      rgba(0, 0, 0, 0.15), 
+      rgba(0, 0, 0, 0.2),  
+      rgba(0, 0, 0, 0.25), 
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.5),  
+      rgba(0, 0, 0, 0.55), 
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.75)
+    ); 
+    
+
+    .info-container {
+      position: relative;
+    
+      
+      display: flex;
+    flex-direction: column;
+      padding: 50px;
+
+      .namePet {
+        font-size: 50px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+      }
+
+      .grid-chip {
+        position: relative;
+        width: 100%;
+        display: grid;
+        gap: 10px;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto;
+        background-color:transparent;
+        grid-auto-flow: dense;
+
+      ::ng-deep mat-chip {
+          width: auto;
+          background: rgba(255, 255, 0, 0.886);
+          
+          padding: 10px;
+       
+          text-align: center;
+         
+        }
+
+        
+        
+       
+       
+      }
+
+      .icons-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+        margin-top: 30px;
+        border: 1px solid red;
+    
+        .specific-icon {
+          border: none;
+          width: 60px;
+          height: 60px;
+        }
+
+        .specific-icon:hover {
+          scale: 1.07;
+        }
+      }
+    }
+
+    
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+ 
+  
+
+  
+
+  .detail-container {
+   
+    animation: slideDown 0.5s ease-out;
+    position: relative;
+    z-index: 8;
+    top : -400px;
+   
+  padding: 20px;
+    width: 628px;
+    color: #e0e0e0; 
+    border: 1px solid red;
+    background-color: rgb(17, 20, 24);
+    font-family: Arial, sans-serif;
+
+
+    .title {
+      font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+
+    .pet-info-form h2 {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: #ffffff; /* Màu chữ tiêu đề sáng */
+      margin-bottom: 20px;
+    }
+    
+    /* Các dòng thông tin của form */
+    .pet-info-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    
+    .pet-info-item label {
+      font-weight: bold;
+      color: #aaaaaa; /* Màu chữ nhãn xám sáng */
+    }
+    
+    .pet-info-item span {
+      color: #e0e0e0; /* Màu chữ giá trị sáng */
+    }
+    
+    /* Định dạng khoảng cách */
+    .pet-info-item label, .pet-info-item span {
+      flex-basis: 45%;
+    }
+
+    .pet-info-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .pet-info-item label, .pet-info-item span {
+      flex-basis: auto;
+      margin-bottom: 5px;
+    }
+  }
+  
+
+
+}
+
+}

@@ -1,0 +1,83 @@
+
+<app-login *ngIf="loginStatus"></app-login>
+<div class="introduce-container">
+
+<div class="image-carousel">
+<p-carousel
+[value]="imageList"
+[numVisible]="1"
+circular="true"
+[numScroll]="1"
+[showIndicators]="false"
+autoplayInterval="10000"
+(onPage)="onPage($event)"
+>   
+    <ng-template let-obj pTemplate="item" >
+        <img [src]="obj.image"/>
+        <div class="content-img">
+            <div id="title-content">{{obj.title}}</div>
+            <div id="md-content">{{obj.content}}</div>
+        </div>
+        
+    </ng-template>
+   
+  
+    
+</p-carousel>
+</div>
+
+<div class="title">
+    nhận nuôi thú cưng - pet adoption
+</div>
+
+<div class="content"> 
+    Chúng tôi là một
+     nhóm trẻ gồm tình nguyện 
+     viên Việt Nam, 
+     cùng hoạt động vì tình yêu chó mèo. Tôn chỉ 
+     hoạt động của chúng tôi là không từ bỏ nỗ lực với 
+     bất kỳ con vật nào, dù bé có ốm yếu hay tàn tật tới đâu, 
+     bởi mỗi thú cưng đều cần có cơ hội hi vọng vào một tương lai tốt đẹp. 
+     Chúng tôi cố gắng chăm sóc tốt nhất có thể, 
+     phần nào bù đắp lại những tổn thương 
+     cho các bé được cứu hộ về dù là hoang
+     , lạc, bị bỏ rơi hay bạo hành. Ngoài ra
+     , chúng tôi cũng luôn nỗ lực tìm mái ấm 
+     yêu thương các bé trọn đời. Và cuối cùng
+     , chúng tôi giúp nâng cao nhận thức về 
+     trách nhiệm của chủ nuôi thông qua mạng 
+     xã hội và các hoạt động thiện nguyện.
+</div>
+
+
+<div class="latest-news-container">
+
+    <div class="title">được nhận nuôi gần đây</div>
+
+    <p-carousel 
+    [value]="newslist" 
+    [numVisible]="3" 
+    showIndicators="false"
+    [circular]="true"
+    
+    >
+        <ng-template let-obj pTemplate="item">
+                <div class="unitCard">
+                   <img [src]="obj.image"/>
+                   <div class="TitleAndContent">
+                       <label> tieu de o day</label>
+                       <div> content jfkasd fsdfsdf sdfsdfsdsdssf sdfsdfsdf</div>
+                       <button>Đọc bài viết</button>
+                   </div>
+                </div>
+        </ng-template>
+</p-carousel>
+
+
+<div> 
+    <button class="btt" (click)="loginToggle()">Tìm thú cưng ngay</button>
+</div>
+
+</div>
+
+</div>

@@ -1,0 +1,43 @@
+
+<div class="login-container" [ngStyle]="{'background-color': chooseEmail ? 'black' : 'transparent'}">
+
+<div *ngIf="!chooseEmail" class="inner-login">
+  <img src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2FAngular_full_color_logo.svg.png?alt=media&token=3f795cc3-9165-4222-ac12-d7e6e1caf692">
+  <p >Bắt đầu </p>
+  <div></div>
+
+  <div class="mini-login-bar" (click)="clickEmail()" >
+    <img id="imgEmail" src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Femail(1).png?alt=media&token=e7b3ab4c-b3a3-49db-a027-118f22df1755">
+    <div  class="inner-text">Đăng nhập bằng email</div>
+  </div>
+  <div class="mini-login-bar">>
+    <img id="imgGG" src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2Fgoogle.png?alt=media&token=40cdfd1b-9966-4706-a047-7e9ccf7fb1a8">
+    <div class="inner-text">Đăng nhập bằng google</div>
+  </div>
+</div>
+
+<div *ngIf="chooseEmail" class="inner-login" [ngStyle]="{'background-color': 'black'}">
+  <img src="https://firebasestorage.googleapis.com/v0/b/blogpj-t1.appspot.com/o/image%2FAngular_full_color_logo.svg.png?alt=media&token=3f795cc3-9165-4222-ac12-d7e6e1caf692">
+  <p [ngStyle]="{'color': chooseEmail ? 'white' : 'transparent'}">Đăng nhập</p>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="form-container">
+  <div class="form__group field">
+    <input type="email" class="form__field" placeholder="Email" email="name" id='name' required />
+    <label for="name" class="form__label">Email</label>
+  </div>
+
+  <div class="form__group field">
+    <input type="text" class="form__field" placeholder="password" name="password" id='password' required />
+    <label for="password" class="form__label">Password</label>
+  </div>
+</form>
+
+<div class="button-container">
+<button id="button-submit"  >Submit</button>
+<button id="button-cancel" (click)="cancel()">Cancel</button>
+</div>
+
+</div>
+
+</div>
+
+
