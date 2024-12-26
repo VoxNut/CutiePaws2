@@ -1,4 +1,4 @@
-<app-login *ngIf="loginStatus"></app-login>
+<app-login *ngIf="loginStatus" (buttonClicked)="loginToggle()"></app-login>
 <div class="introduce-container">
   <div class="image-carousel">
     <p-carousel
@@ -35,7 +35,7 @@
   </div>
 
   <div class="latest-news-container">
-    <div class="title">ĐƯỢC NHẬN NUÔI GẦN ĐÂY</div>
+    <div class="title">Được nhận nuôi gần đây</div>
 
     <p-carousel
       [value]="newslist"
@@ -49,8 +49,8 @@
           <div class="TitleAndContent">
             <label>{{ obj.title }}</label>
             <div>{{ obj.content }}</div>
-            <button>Đọc bài viết</button>
           </div>
+          <button>Đọc bài viết</button>
         </div>
       </ng-template>
     </p-carousel>
