@@ -1,24 +1,6 @@
 
-.icon-list {
-  display: flex;
-  position: fixed;
-  flex-direction: column; /* Các mục xếp dọc */
-  gap: 15px; /* Khoảng cách giữa các mục */
-  left : 1600px;
-  top : 80px;
-  margin: 20px;
-}
 
 
-.icon-list2 {
-  display: flex;
-  position: fixed;
-  flex-direction: row; /* Các mục xếp dọc */
-  gap: 15px; /* Khoảng cách giữa các mục */
-  left :100px;
-  top : 850px;
-  margin: 20px;
-}
 
 .icon-item {
   display: flex;
@@ -45,6 +27,27 @@
 display: flex;
 flex-direction: row;
 background-color:  #f6bc66;
+
+.icon-list {
+  display: flex;
+  position: relative;
+  flex-direction: column; /* Các mục xếp dọc */
+  left: 350px;
+  top:50px;
+  gap: 15px;
+}
+
+
+.icon-list2 {
+  display: flex;
+  position: relative;
+  flex-direction: row; /* Các mục xếp dọc */
+  gap: 15px; /* Khoảng cách giữa các mục */
+  top : 430px;
+  right : 1440px;
+  margin: 20px;
+}
+
 
 
 

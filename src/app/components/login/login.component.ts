@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 
+import { Component, EventEmitter, Output } from '@angular/core';
 
 
 
@@ -13,6 +13,7 @@ export class LoginComponent {
 
   constructor(){
   }
+  @Output() buttonClicked = new EventEmitter<void>(); 
 
   submit() {
 
@@ -30,6 +31,10 @@ export class LoginComponent {
 
   cancel() : void {
     this.chooseEmail = false;
+  }
+
+  cancelLogin(){
+    this.buttonClicked.emit();
   }
 
 } 
