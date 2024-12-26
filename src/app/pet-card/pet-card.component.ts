@@ -34,7 +34,7 @@ export class PetCardComponent {
       ],
       description :{  
         id : "1",
-        name : "Harundris",
+        name : "Mướp",
         sex : "đực",
         weight : "4kg",
         color : "đen",
@@ -46,13 +46,13 @@ export class PetCardComponent {
 
       {
         imageUrl : [
-         "https://images.pexels.com/photos/979247/pexels-photo-979247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "https://www.rspca.org.uk/documents/d/rspca/findapetheroocto?imagePreview=1",
-          "https://images.f247.com/original/3X/9/a/9a5f64b89250e61acc8d5521f42756d25d895966.jpeg"
+         "https://cdn.pixabay.com/photo/2023/04/15/17/08/bernese-mountain-dog-7928156_1280.jpg",
+          "https://m.media-amazon.com/images/I/919PGuuSfqL.png",
+          
         ],
         description :{
           id : "1",
-          name : "Harundris",
+          name : "Mực",
           sex : "đực",
           weight : "4kg",
           color : "đen",
@@ -64,7 +64,7 @@ export class PetCardComponent {
 
         {
           imageUrl : [
-           "https://www.rspca.org.uk/documents/d/rspca/findapetheroocto?imagePreview=1",
+           "https://cdn.pixabay.com/photo/2023/08/18/15/02/dog-8198719_1280.jpg",
           "https://www.rspca.org.uk/documents/d/rspca/findapetheroocto?imagePreview=1",
             "https://images.f247.com/original/3X/9/a/9a5f64b89250e61acc8d5521f42756d25d895966.jpeg"
           ],
@@ -79,7 +79,111 @@ export class PetCardComponent {
             comment : "chó đột biến, chưa có thuốc ngừa dại"
           }
 
+  },{
+    imageUrl : [
+      "https://images.pexels.com/photos/747795/pexels-photo-747795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+     "https://images.pexels.com/photos/16957417/pexels-photo-16957417/free-photo-of-head-of-cat.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    ],
+    description :{  
+      id : "1",
+      name : "Mướp",
+      sex : "đực",
+      weight : "4kg",
+      color : "đen",
+      vaccin : "đã tiêm phòng",
+      age : "Trưởng thành",
+      comment : "bé bị bỏ rơi và được một trạm cứu hộ nhặt được, bé rất ngoan và hiền lành"
+    }
+  },
+
+    {
+      imageUrl : [
+       "https://cdn.pixabay.com/photo/2023/04/15/17/08/bernese-mountain-dog-7928156_1280.jpg",
+        "https://m.media-amazon.com/images/I/919PGuuSfqL.png",
+        
+      ],
+      description :{
+        id : "1",
+        name : "Mực",
+        sex : "đực",
+        weight : "4kg",
+        color : "đen",
+        vaccin : "đã tiêm phòng",
+        age : "Trưởng thành",
+        comment : "bé bị bỏ rơi và được một trạm cứu hộ nhặt được, bé rất ngoan và hiền lành"
+      }
+      },
+
+      {
+        imageUrl : [
+         "https://cdn.pixabay.com/photo/2023/08/18/15/02/dog-8198719_1280.jpg",
+        "https://www.rspca.org.uk/documents/d/rspca/findapetheroocto?imagePreview=1",
+          "https://images.f247.com/original/3X/9/a/9a5f64b89250e61acc8d5521f42756d25d895966.jpeg"
+        ],
+        description :{
+          id : "11",
+          name : "Harundris",
+          sex : "cái",
+          weight : "2kg",
+          color : "xanh",
+          vaccin : "chưa tiêm phòng",
+          age : "Trưởng thành",
+          comment : "chó đột biến, chưa có thuốc ngừa dại"
+        }
+
+},{
+  imageUrl : [
+    "https://images.pexels.com/photos/747795/pexels-photo-747795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+   "https://images.pexels.com/photos/16957417/pexels-photo-16957417/free-photo-of-head-of-cat.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+  ],
+  description :{  
+    id : "1",
+    name : "Mướp",
+    sex : "đực",
+    weight : "4kg",
+    color : "đen",
+    vaccin : "đã tiêm phòng",
+    age : "Trưởng thành",
+    comment : "bé bị bỏ rơi và được một trạm cứu hộ nhặt được, bé rất ngoan và hiền lành"
   }
+},
+
+  {
+    imageUrl : [
+     "https://cdn.pixabay.com/photo/2023/04/15/17/08/bernese-mountain-dog-7928156_1280.jpg",
+      "https://m.media-amazon.com/images/I/919PGuuSfqL.png",
+      
+    ],
+    description :{
+      id : "1",
+      name : "Mực",
+      sex : "đực",
+      weight : "4kg",
+      color : "đen",
+      vaccin : "đã tiêm phòng",
+      age : "Trưởng thành",
+      comment : "bé bị bỏ rơi và được một trạm cứu hộ nhặt được, bé rất ngoan và hiền lành"
+    }
+    },
+
+    {
+      imageUrl : [
+       "https://cdn.pixabay.com/photo/2023/08/18/15/02/dog-8198719_1280.jpg",
+      "https://www.rspca.org.uk/documents/d/rspca/findapetheroocto?imagePreview=1",
+        "https://images.f247.com/original/3X/9/a/9a5f64b89250e61acc8d5521f42756d25d895966.jpeg"
+      ],
+      description :{
+        id : "11",
+        name : "Harundris",
+        sex : "cái",
+        weight : "2kg",
+        color : "xanh",
+        vaccin : "chưa tiêm phòng",
+        age : "Trưởng thành",
+        comment : "chó đột biến, chưa có thuốc ngừa dại"
+      }
+
+}
   ]
 
 
@@ -92,11 +196,11 @@ export class PetCardComponent {
 
   alertSuccess(){
     this._snackBar.dismiss();
-    this._snackBar.open("thành công", "đóng");
+    this._snackBar.open("thêm thú cưng thành công", "đóng");
   }
 
   next (){
-    if(this.indexTab < this.list.length-2)
+    if(this.indexTab <= this.list.length-2)
     this.indexTab = this.indexTab+1;
   }
 
@@ -112,7 +216,7 @@ export class PetCardComponent {
     }else {
 
       this.messageList.push(this.currentPetidx);
-    if(this.currentPetidx < this.list.length-1){
+    if(this.currentPetidx <= this.list.length-1){
     this.nextPet();
     this.detail = false;
     }
@@ -137,7 +241,7 @@ export class PetCardComponent {
 
 
   nextPet(){
-    if(this.currentPetidx < this.list.length){
+    if(this.currentPetidx <= this.list.length){
       this.currentPetidx = this.currentPetidx +1;
     this.detail = false;
     }
@@ -149,7 +253,7 @@ export class PetCardComponent {
   }
 
   backPet(){
-    if(this.currentPetidx > 0 ){
+    if(this.currentPetidx >= 0 ){
       this.currentPetidx = this.currentPetidx -1;
       this.detail = false;
     }  else {

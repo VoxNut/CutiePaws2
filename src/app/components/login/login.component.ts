@@ -14,6 +14,10 @@ export class LoginComponent {
   constructor(){
   }
 
+  submit() {
+
+  }
+
   chooseEmail : boolean = false;
 
   clickEmail() : void {

@@ -68,7 +68,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatTabsModule,
     CarouselModule,
     MatSnackBarModule,
-    MatExpansionModule
+    MatExpansionModule,
     
 
   ],

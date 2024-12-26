@@ -28,24 +28,24 @@ export class IntroduceComponent {
    ]
 
    newslist = [
-    {title : "Hawkesbury CAS: Positive change for our companions",
-      content :"There are some incredibly passionate folks working hard to transform the traditional and outdated model of council pounds into one that prioritises the wellbeing of homeless pets, and they deserve the spotlight shined on them! We recently spoke with Rob Wainhouse, Coordinator for Animal Services and Community Safety, who has been with Hawkesbury Companion Animal Shelter for just over a year. Working with a fantastic team at the shelter, Rob has driven impressive positive change for homeless pets and the wider community",
+    {title : "nhóm trẻ tình nguyện tốt bụng",
+      content :"một nhóm các bạn trẻ tốt bụng ở thành phố Bình Dương đăng ký nhận nuôi một ...",
       image : "https://res.cloudinary.com/petrescue/image/upload/h_330,w_330,c_fill,g_face,f_auto,q_auto:best/c_limit,w_700/v1730089127/k4uclwhnqwprdqyqjtjt.jpg"
     },
+    {title : " nhận nuôi mèo bỏ rơi",
+      content :"một gia đình tốt bụng vừa nhận nuôi 2 bé mèo khuyết tật ",
+      image : "https://res.cloudinary.com/petrescue/image/upload/c_fill,f_auto,g_face,h_500,q_80,w_500/yfj7e4p5cwnsldya8rkg.jpg"
+    },
+    {title : "cứu hộ tại đám cháy",
+      content :"một đám cháy lớn tại adshfahsf khiến 200 ngừoi bị thương , thiệt hại hơn ...",
+      image : "https://image.baophapluat.vn/w840/Uploaded/2024/ibpchuf/2024_12_01/khoi-33-1733047635304839461236-2368.jpg"
+    },
     {title : "Why can’t I find the rescue organisation I’m looking for?",
-      content :"Wondering why you can’t find the rescue organisation you're looking for on PetRescue? Learn more about why a rescue organisatio",
+      content :"Wondering why you can’t find the rescue organisation y",
       image : "https://res.cloudinary.com/petrescue/image/upload/c_fill,f_auto,g_face,h_500,q_80,w_500/yfj7e4p5cwnsldya8rkg.jpg"
     },
     {title : "Why can’t I find the rescue organisation I’m looking for?",
-      content :"Wondering why you can’t find the rescue organisation you're looking for on PetRescue? Learn more about why a rescue organisatio",
-      image : "https://res.cloudinary.com/petrescue/image/upload/c_fill,f_auto,g_face,h_500,q_80,w_500/yfj7e4p5cwnsldya8rkg.jpg"
-    },
-    {title : "Why can’t I find the rescue organisation I’m looking for?",
-      content :"Wondering why you can’t find the rescue organisation you're looking for on PetRescue? Learn more about why a rescue organisatio",
-      image : "https://res.cloudinary.com/petrescue/image/upload/c_fill,f_auto,g_face,h_500,q_80,w_500/yfj7e4p5cwnsldya8rkg.jpg"
-    },
-    {title : "Why can’t I find the rescue organisation I’m looking for?",
-      content :"Wondering why you can’t find the rescue organisation you're looking for on PetRescue? Learn more about why a rescue organisatio",
+      content :"Wondering why you can’t find the rescue organisation you're looking for on PetRescue? ",
       image : "https://res.cloudinary.com/petrescue/image/upload/c_fill,f_auto,g_face,h_500,q_80,w_500/yfj7e4p5cwnsldya8rkg.jpg"
     }
   ]

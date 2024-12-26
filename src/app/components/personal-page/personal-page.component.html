@@ -1,1 +1,22 @@
-<p>personal-page works!</p>
+<div class="user-profile">
+    <div class="user-info">
+      <img [src]="user.avatar" alt="User Avatar" class="avatar">
+      <h2>{{ user.name }}</h2>
+      <p>Email: {{ user.email }}</p>
+    </div>
+  
+    <div class="adopted-pets">
+      <h3>Thú cưng đã nhận nuôi</h3>
+      <div *ngIf="user.adoptedPets.length > 0; else noPets">
+        <div class="pet" *ngFor="let pet of user.adoptedPets">
+          <img [src]="pet.image" alt="{{ pet.name }}" class="pet-image">
+          <h4>{{ pet.name }}</h4>
+          <p>Loại: {{ pet.type }}</p>
+        </div>
+      </div>
+      <ng-template #noPets>
+        <p>Chưa nhận nuôi thú cưng nào.</p>
+      </ng-template>
+    </div>
+  </div>
+  

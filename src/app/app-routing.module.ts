@@ -5,6 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { ChipPatternComponent } from './chip-pattern/chip-pattern.component';
 import { PetCardComponent } from './pet-card/pet-card.component';
+import { PersonalPageComponent } from './components/personal-page/personal-page.component';
 
 const routes: Routes = [
   {path: "introduce", component : IntroduceComponent}, 
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: "register", component : RegisterFormComponent}, 
   {path: "chip", component : ChipPatternComponent}, 
   {path: "card", component : PetCardComponent}, 
+  {path: "personal-page", component : PersonalPageComponent}, 
   
   
 ];

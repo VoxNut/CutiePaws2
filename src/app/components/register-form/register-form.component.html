@@ -11,10 +11,10 @@
 
     <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
       <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Fill out your name</ng-template>
+        <ng-template matStepLabel>Tên của bạn</ng-template>
         <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
+          <mat-label>Tên</mat-label>
+          <input matInput formControlName="firstCtrl" placeholder="Nguyễn Văn A" required>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -23,10 +23,10 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
       <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Fill out your address</ng-template>
+        <ng-template matStepLabel>Địa chỉ của bạn</ng-template>
         <mat-form-field>
           <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+          <input matInput formControlName="secondCtrl" placeholder="Hẻm 98, đường Bình Dương, tỉnh Bình Thường"
                  required>
         </mat-form-field>
         <div>
@@ -41,10 +41,10 @@
 
     <mat-step [stepControl]="ThirdFormGroup" [editable]="isEditable">
       <form [formGroup]="ThirdFormGroup">
-        <ng-template matStepLabel>Fill out your phone number</ng-template>
+        <ng-template matStepLabel>Số điện thoại của bạn</ng-template>
         <mat-form-field>
           <mat-label>phone number</mat-label>
-          <input matInput type="tel" formControlName="thirdCtrl" placeholder="your phone"
+          <input matInput type="tel" formControlName="thirdCtrl" placeholder="0981234567"
           pattern="[0-9]*" required>
         </mat-form-field>
         <div>
@@ -57,26 +57,26 @@
 
     <mat-step [stepControl]="FourthFormGroup" [editable]="isEditable">
       <form [formGroup]="FourthFormGroup">
-        <ng-template matStepLabel>Fill out your address</ng-template>
+        <ng-template matStepLabel>Email của bạn</ng-template>
         <mat-form-field>
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="fourthCtrl" placeholder="email"
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="fourthCtrl" placeholder="email@gmail.com"
                  required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperPrevious>Quay lại</button>
+          <button mat-button matStepperNext>Tiếp</button>
         </div>
       </form>
     </mat-step>
 
 
     <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <p>You are now done.</p>
+      <ng-template matStepLabel>Xong</ng-template>
+      <p>Bạn đã điền form hoàn tất</p>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button matStepperPrevious>Quay lại</button>
+        <button mat-button (click)="stepper.reset()">Điền lại từ đầu</button>
       </div>
     </mat-step>
   </mat-stepper>
@@ -111,7 +111,7 @@ label="lý do khác"
 
 </div>
       <div>
-        <button mat-button matStepperNext >Next</button>
+        <button mat-button matStepperNext >Tiếp</button>
       </div>
    
   </mat-step>
@@ -123,8 +123,8 @@ label="lý do khác"
       <mat-radio-button value="2">khác</mat-radio-button>
     </mat-radio-group>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext  [disabled]="!selectedOption">Next</button>
+        <button mat-button matStepperPrevious>Quay lại</button>
+        <button mat-button matStepperNext  [disabled]="!selectedOption">Tiếp</button>
       </div>
     
   </mat-step>
@@ -136,17 +136,17 @@ label="lý do khác"
       <mat-radio-button value="2">không</mat-radio-button>
     </mat-radio-group>
     <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext [disabled]="!homeOwnership">Next</button>
+      <button mat-button matStepperPrevious>Quay lại</button>
+      <button mat-button matStepperNext [disabled]="!homeOwnership">Tiếp</button>
     </div>
   </mat-step>
 
   <mat-step >
-    <ng-template matStepLabel>Done</ng-template>
+    <ng-template matStepLabel>Hoàn tất</ng-template>
     <p>hoàn tất.</p>
     <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
+      <button mat-button matStepperPrevious>Quay lại</button>
+      <button mat-button (click)="stepper.reset()">Đièn lại từ đầu</button>
     </div>
   </mat-step>
 </mat-stepper>

@@ -4,6 +4,7 @@
     width: 100vw;
     flex-direction: column;
     text-align: center;
+    background-color: #f6bc66;
   
     p {
       font-size: 24px;
@@ -55,7 +56,7 @@
 
               #title-content {
     font-size: 35px;
-    color: #fff;
+    color: #ffd700;;
     line-height: 1.1;
     font-weight: bold;
     margin-bottom: 5px; // Thêm khoảng cách dưới tiêu đề
@@ -63,6 +64,7 @@
 
   #md-content {
     font-size: 16px;
+    color :rgb(255, 255, 255);
   }
 
           }
@@ -117,7 +119,7 @@
     .content {
       font-size: 16px; 
       line-height: 1.6; 
-      color: #555; 
+      color: #232323; 
       text-align: justify; 
       padding: 10px 20px; 
       max-width: 800px; 
@@ -132,7 +134,7 @@
     justify-content: center;
     align-items: center;
     
-    background-color: #f9f9f9; /* Light background color */
+    background-color: #f6bc66; /* Light background color */
 
 
     
@@ -163,7 +165,7 @@
     }
 
     .btt:hover {
-      background-color: rgb(227, 216, 5);  
+      background-color: rgb(255, 170, 59);    
     }
     
 
@@ -188,7 +190,7 @@
 }
 
 .unitCard:hover {
-    transform: scale(1.02); /* Slightly enlarge on hover */
+    transform: scale(1.04); /* Slightly enlarge on hover */
 }
 
 .unitCard img {
@@ -205,14 +207,14 @@
 .TitleAndContent label {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #000000;
     margin-bottom: 8px;
     display: block;
 }
 
 .TitleAndContent div {
     font-size: 14px;
-    color: #666;
+    color: #343434;
     line-height: 1.5;
 }
 
@@ -221,14 +223,14 @@
   outline: none;
   border: none;
   border-radius: 10px;
-  background-color: rgb(252, 252, 0);
+  background-color: #f6bc66;
   color: black;
   width: 100px;
   height: 37px;
 }
 
 .TitleAndContent button:hover {
-  background-color: rgb(209, 209, 48);
+  background-color:#ffb950;
 }
 
   }
