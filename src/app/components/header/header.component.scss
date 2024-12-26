@@ -1,75 +1,73 @@
 .header {
-    z-index: 20;
-    background-color: #ffe599 ;
-    color: #ecf0f1;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-  
-    .logo img {
-      height: 40px;
-    }
-  
-    .menu-icon {
-     
-      cursor: pointer;
-  
-      .menu-image {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  
-    .dropdown-menu {
-        z-index: 20;
-      display: none;
-      flex-direction: column;
-      background-color: #34495e;
-      position: absolute;
-      top: 25px;
-      right: 120px;
-      width: 200px;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  
-      .menu-link {
-        color: #ecf0f1;
-        padding: 10px 20px;
-        text-decoration: none;
-        text-align: left;
-        border-bottom: 1px solid #2c3e50;
-        transition: background-color 0.3s;
-  
-        &:hover {
-          background-color: #ffe599;
-          color : black;
-        }
-  
-        &:last-child {
-          border-bottom: none;
-        }
-      }
-  
-      &.active {
-        display: flex;
-      }
-    }
-  
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-  
-      .dropdown-menu {
-        display: none; 
-      }
+  z-index: 20;
+  background-color: #ffe599;
+  color: #ecf0f1;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+
+    .menu-image {
+      width: 30px;
+      height: 30px;
     }
   }
-  
+
+  .dropdown-menu {
+    z-index: 20;
+    display: none;
+    flex-direction: column;
+    background-color: #34495e;
+    position: absolute;
+    top: 25px;
+    right: 120px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    .menu-link {
+      color: #ecf0f1;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-align: left;
+      border-bottom: 1px solid #2c3e50;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #ffe599;
+        color: black;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+
+    .dropdown-menu {
+      display: none;
+    }
+  }
+}
